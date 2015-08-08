@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>touchvg</ProjectName>
+    <ProjectGuid>{180CC455-E62C-4AB8-A024-F3FF724719EA}</ProjectGuid>
+    <RootNamespace>touchvg</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\build\$(Configuration)10\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\build\$(Configuration)10\obj\..\build\$(ConfigurationName)9\obj\$(ProjectName)_csharp\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\build\$(Configuration)10\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\build\$(Configuration)10\obj\..\build\$(ConfigurationName)9\obj\$(ProjectName)_csharp\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\thirdparty\TouchVGCore\core\include;..\..\thirdparty\TouchVGCore\core\include\geom;..\..\thirdparty\TouchVGCore\core\include\graph;..\..\thirdparty\TouchVGCore\core\include\canvas;..\..\thirdparty\TouchVGCore\core\include\shape;..\..\thirdparty\TouchVGCore\core\include\storage;..\..\thirdparty\TouchVGCore\core\include\cmd;..\..\thirdparty\TouchVGCore\core\include\cmdobserver;..\..\thirdparty\TouchVGCore\core\include\cmdbase;..\..\thirdparty\TouchVGCore\core\include\cmdbasic;..\..\thirdparty\TouchVGCore\core\include\cmdmgr;..\..\thirdparty\TouchVGCore\core\include\view;..\..\thirdparty\TouchVGCore\core\include\shapedoc;..\..\thirdparty\TouchVGCore\core\include\json;..\..\thirdparty\TouchVGCore\core\include\export;..\..\thirdparty\TouchVGCore\core\include\test</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;TOUCHVG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4819;4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\..\thirdparty\TouchVGCore\win\build\$(Configuration)10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>TouchVGCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\thirdparty\TouchVGCore\core\include;..\..\thirdparty\TouchVGCore\core\include\geom;..\..\thirdparty\TouchVGCore\core\include\graph;..\..\thirdparty\TouchVGCore\core\include\canvas;..\..\thirdparty\TouchVGCore\core\include\shape;..\..\thirdparty\TouchVGCore\core\include\storage;..\..\thirdparty\TouchVGCore\core\include\cmd;..\..\thirdparty\TouchVGCore\core\include\cmdobserver;..\..\thirdparty\TouchVGCore\core\include\cmdbase;..\..\thirdparty\TouchVGCore\core\include\cmdbasic;..\..\thirdparty\TouchVGCore\core\include\cmdmgr;..\..\thirdparty\TouchVGCore\core\include\view;..\..\thirdparty\TouchVGCore\core\include\shapedoc;..\..\thirdparty\TouchVGCore\core\include\json;..\..\thirdparty\TouchVGCore\core\include\export;..\..\thirdparty\TouchVGCore\core\include\test</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;TOUCHVG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4819;4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\..\thirdparty\TouchVGCore\win\build\$(Configuration)10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>TouchVGCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\thirdparty\TouchVGCore\core\src\view\touchvg.swig">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Swig generating...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">swig.exe -c++ -csharp -namespace "touchvg.core" -module touchvg -outdir "$(ProjectDir)..\touchvglib\core" -o "$(ProjectDir)touchvg_csharp_wrap.cpp" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\canvas" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\graph" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmd" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\test" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\view" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\storage" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\geom" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\shape" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdobserver" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdbase" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdbasic" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\shapedoc" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\jsonstorage" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdmgr" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)touchvg_csharp_wrap.cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Swig generating...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">swig.exe -c++ -csharp -namespace "touchvg.core" -module touchvg -outdir "$(ProjectDir)..\touchvglib\core" -o "$(ProjectDir)touchvg_csharp_wrap.cpp" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\canvas" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\graph" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmd" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\test" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\view" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\storage" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\geom" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\shape" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdobserver" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdbase" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdbasic" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\shapedoc" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\jsonstorage" -I"$(ProjectDir)..\..\thirdparty\TouchVGCore\core\include\cmdmgr" "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)touchvg_csharp_wrap.cpp;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include=".\touchvg_csharp_wrap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\view\gimousehelper.h" />
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\graph\gicolor.h" />
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\graph\gicontxt.h" />
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\view\gicoreview.h" />
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\view\gigesture.h" />
+    <ClInclude Include=".\touchvg_csharp_wrap.h" />
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\canvas\gicanvas.h" />
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\view\giview.h" />
+    <ClInclude Include="..\..\thirdparty\TouchVGCore\core\include\test\testcanvas.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
